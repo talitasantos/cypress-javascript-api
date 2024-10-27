@@ -1,0 +1,21 @@
+{
+    "name": "cypress-javascript-api",
+    "version": "1.0.0",
+    "description": "Projeto de teste de API usando Cypress",
+    "main": "index.js",
+    "scripts": {
+        "test": "cypress run",
+        "cypress:open": "cypress open"
+    },
+    "keywords": [
+        "cypress",
+        "api-testing",
+        "test-automation"
+    ],
+    "author": "Talita Ribeiro",
+    "license": "ISC",
+    "devDependencies": {
+        "cypress": "^12.17.4",
+        "cypress-plugin-api": "^2.0.1"
+    }
+}

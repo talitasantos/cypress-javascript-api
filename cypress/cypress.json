@@ -1,0 +1,22 @@
+{
+    "baseUrl": "https://api.trello.com/1/",
+    "defaultCommandTimeout": 10000,
+    "requestTimeout": 8000,
+    "viewportWidth": 1280,
+    "viewportHeight": 720,
+    "env": {
+      "apiUrl": "https://api.trello.com/1/",
+      "authToken": "ATTAbc1213b99c79e5dff297be5e41d8f0825b7fbb7548781f6d8de80108359d7909079CF103",
+      "apiKey": "7085f6851a2fab9dc40545959882364c"
+    },
+    "reporter": "spec",
+    "reporterOptions": {
+      "mochaFile": "results/test-results-[hash].xml",
+      "toConsole": true
+    },
+    "retries": {
+      "runMode": 2,
+      "openMode": 1
+    }
+  }
+  
