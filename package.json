@@ -15,7 +15,12 @@
     "author": "Talita Ribeiro",
     "license": "ISC",
     "devDependencies": {
+        "@bahmutov/cy-api": "^1.4.3",
         "cypress": "^12.17.4",
-        "cypress-plugin-api": "^2.0.1"
+        "cypress-plugin-api": "^2.0.1",
+        "typescript": "^5.6.3"
+    },
+    "dependencies": {
+        "node-fetch": "^2.7.0"
     }
 }
