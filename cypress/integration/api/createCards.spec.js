@@ -17,7 +17,7 @@ describe('Trello Cards API Tests', () => {
     };
 
     it('Successfully create a new card', () => {
-        createCardRequest({ name: 'Card created by Robot', idList: '671d789c89e6c35196d5d940' }).then((response) => {
+        createCardRequest({ name: 'Card created by Robot', idList: '671f5ae583e19f6ccdc96c90' }).then((response) => {
             expect(response.status).to.eq(200);
         });
     });

@@ -46,25 +46,4 @@ describe('Trello Delete Boards API Tests', () => {
             expect(response.body).to.eq('invalid id');
         });
     });
-
-    // it('Attempt to delete a non-existing board', () => {
-    //     deleteBoardRequest({ boardId: '67201a6a0d25adc27aae7a6c' }).then((response) => {
-    //         expect(response.status).to.eq(404);
-    //         expect(response.body).to.eq('The requested resource was not found.');
-    //     });
-    // });
-
-    // it('Attempt to delete a board with an invalid Token', () => {
-    //     deleteBoardRequest({ boardId: '67201a6a0d25adc27aae7a6c', token: 'invalidToken' }).then((deleteResponse) => {
-    //         expect(deleteResponse.status).to.eq(401);
-    //         eexpect(response.body).to.eq('unauthorized permission requested');
-    //     });
-    // });
-
-    // it('Attempt to delete a board with an invalid API Key', () => {
-    //     deleteBoardRequest({ boardId: '67201a6a0d25adc27aae7a6c', key: 'invalidKey' }).then((deleteResponse) => {
-    //         expect(deleteResponse.status).to.eq(401);
-    //         expect(deleteResponse.body).to.eq('invalid app key');
-    //     });
-    // });
 });
