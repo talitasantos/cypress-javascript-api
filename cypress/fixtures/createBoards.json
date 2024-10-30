@@ -1,0 +1,15 @@
+{
+    "validBoard": {
+      "name": "Board created by Robot"
+    },
+    "withoutName": {},
+    "invalidToken": {
+      "name": "Board created by Robot",
+      "token": "invalidToken"
+    },
+    "invalidApiKey": {
+      "name": "Board created by Robot",
+      "key": "7085f6851a2fab9dc40545959882364d"
+    }
+  }
+  

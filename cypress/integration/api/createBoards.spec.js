@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Trello Boards API Tests', () => {
+describe('Trello Create Boards API Tests', () => {
   const baseUrl = `${Cypress.config('baseUrl')}/boards/`;
   const defaultQueryParams = {
     token: Cypress.config('token'),
@@ -16,34 +16,32 @@ describe('Trello Boards API Tests', () => {
     });
   };
 
-  it('Successfully create a new board', () => {
-    createBoardRequest({ name: 'Board created by Robot' }).then((response) => {
+  beforeEach(() => {
+    cy.fixture('createBoards').as('boardsData');
+  });
+
+  it('Successfully create a new board', function () {
+    createBoardRequest(this.boardsData.validBoard).then((response) => {
       expect(response.status).to.eq(200);
     });
   });
 
-  it('Attempt to create a board without a name', () => {
-    createBoardRequest({}).then((response) => {
+  it('Attempt to create a board without a name', function () {
+    createBoardRequest(this.boardsData.withoutName).then((response) => {
       expect(response.status).to.eq(400);
       expect(response.body).to.have.property('message', 'invalid value for name');
       expect(response.body).to.have.property('error', 'ERROR');
     });
   });
 
-  it('Attempt to create a board with an invalid Token', () => {
-    createBoardRequest({
-      token: 'invalidToken',
-      name: 'Board created by Robot'
-    }).then((response) => {
+  it('Attempt to create a board with an invalid Token', function () {
+    createBoardRequest(this.boardsData.invalidToken).then((response) => {
       expect(response.status).to.eq(401);
     });
   });
 
-  it('Attempt to create a board with an invalid API Key', () => {
-    createBoardRequest({
-      key: '7085f6851a2fab9dc40545959882364d',
-      name: 'Board created by Robot'
-    }).then((response) => {
+  it('Attempt to create a board with an invalid API Key', function () {
+    createBoardRequest(this.boardsData.invalidApiKey).then((response) => {
       expect(response.status).to.eq(401);
       expect(response.body).to.eq('invalid key');
     });
@@ -56,4 +54,5 @@ describe('Trello Boards API Tests', () => {
       expect(response.status).to.eq(413);
     });
   });
+
 });
