@@ -25,23 +25,25 @@ describe('Trello Delete Boards API Tests', () => {
         });
     };
 
-    it('Successfully create a new board and delete it', () => {
-        createBoardRequest({ name: 'Board created by Robot to be deleted' }).then((response) => {
+    beforeEach(() => {
+        cy.fixture('deleteBoards').as('boardData');
+    });
+
+    it('Successfully create a new board and delete it', function () {
+        createBoardRequest(this.boardData.validBoard).then((response) => {
             expect(response.status).to.eq(200);
 
-            // Stores the ID of the board created to delete later
             const boardId = response.body.id;
             cy.wrap(boardId).as('id');
 
-            // Delete the created board
             deleteBoardRequest(boardId).then((deleteResponse) => {
                 expect(deleteResponse.status).to.eq(200);
             });
         });
     });
 
-    it('Attempt to delete a invalid board', () => {
-        deleteBoardRequest({ boardId: '67201e3569ca1487b2ff4f40FXXX' }).then((response) => {
+    it('Attempt to delete an invalid board', function () {
+        deleteBoardRequest(this.boardData.invalidBoardId.boardId).then((response) => {
             expect(response.status).to.eq(400);
             expect(response.body).to.eq('invalid id');
         });
