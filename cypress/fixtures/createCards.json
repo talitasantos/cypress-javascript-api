@@ -1,0 +1,19 @@
+{
+    "validCard": {
+      "name": "Card created by Robot",
+      "idList": "671f5ae583e19f6ccdc96c90"
+    },
+    "withoutIdList": {},
+    "nonExistentIdList": {
+      "idList": "671d789c89e6c35196d5d948"
+    },
+    "invalidToken": {
+      "token": "invalidToken",
+      "idList": "671d789c89e6c35196d5d940"
+    },
+    "invalidApiKey": {
+      "key": "7085f6851a2fab9dc40545959882364d",
+      "idList": "671d789c89e6c35196d5d940"
+    }
+  }
+  
