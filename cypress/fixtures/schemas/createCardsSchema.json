@@ -1,0 +1,261 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Generated schema for Root",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string"
+      },
+      "badges": {
+        "type": "object",
+        "properties": {
+          "attachmentsByType": {
+            "type": "object",
+            "properties": {
+              "trello": {
+                "type": "object",
+                "properties": {
+                  "board": {
+                    "type": "number"
+                  },
+                  "card": {
+                    "type": "number"
+                  }
+                },
+                "required": [
+                  "board",
+                  "card"
+                ]
+              }
+            },
+            "required": [
+              "trello"
+            ]
+          },
+          "externalSource": {},
+          "location": {
+            "type": "boolean"
+          },
+          "votes": {
+            "type": "number"
+          },
+          "viewingMemberVoted": {
+            "type": "boolean"
+          },
+          "subscribed": {
+            "type": "boolean"
+          },
+          "attachments": {
+            "type": "number"
+          },
+          "fogbugz": {
+            "type": "string"
+          },
+          "checkItems": {
+            "type": "number"
+          },
+          "checkItemsChecked": {
+            "type": "number"
+          },
+          "checkItemsEarliestDue": {},
+          "comments": {
+            "type": "number"
+          },
+          "description": {
+            "type": "boolean"
+          },
+          "due": {},
+          "dueComplete": {
+            "type": "boolean"
+          },
+          "lastUpdatedByAi": {
+            "type": "boolean"
+          },
+          "start": {}
+        },
+        "required": [
+          "attachmentsByType",
+          "externalSource",
+          "location",
+          "votes",
+          "viewingMemberVoted",
+          "subscribed",
+          "attachments",
+          "fogbugz",
+          "checkItems",
+          "checkItemsChecked",
+          "checkItemsEarliestDue",
+          "comments",
+          "description",
+          "due",
+          "dueComplete",
+          "lastUpdatedByAi",
+          "start"
+        ]
+      },
+      "checkItemStates": {
+        "type": "array",
+        "items": {}
+      },
+      "closed": {
+        "type": "boolean"
+      },
+      "dueComplete": {
+        "type": "boolean"
+      },
+      "dateLastActivity": {
+        "type": "string"
+      },
+      "desc": {
+        "type": "string"
+      },
+      "descData": {
+        "type": "object",
+        "properties": {
+          "emoji": {
+            "type": "object",
+            "properties": {},
+            "required": []
+          }
+        },
+        "required": [
+          "emoji"
+        ]
+      },
+      "due": {},
+      "dueReminder": {},
+      "email": {},
+      "idBoard": {
+        "type": "string"
+      },
+      "idChecklists": {
+        "type": "array",
+        "items": {}
+      },
+      "idList": {
+        "type": "string"
+      },
+      "idMembers": {
+        "type": "array",
+        "items": {}
+      },
+      "idMembersVoted": {
+        "type": "array",
+        "items": {}
+      },
+      "idShort": {
+        "type": "number"
+      },
+      "idAttachmentCover": {},
+      "labels": {
+        "type": "array",
+        "items": {}
+      },
+      "idLabels": {
+        "type": "array",
+        "items": {}
+      },
+      "manualCoverAttachment": {
+        "type": "boolean"
+      },
+      "name": {
+        "type": "string"
+      },
+      "pinned": {
+        "type": "boolean"
+      },
+      "pos": {
+        "type": "number"
+      },
+      "shortLink": {
+        "type": "string"
+      },
+      "shortUrl": {
+        "type": "string"
+      },
+      "start": {},
+      "subscribed": {
+        "type": "boolean"
+      },
+      "url": {
+        "type": "string"
+      },
+      "cover": {
+        "type": "object",
+        "properties": {
+          "idAttachment": {},
+          "color": {},
+          "idUploadedBackground": {},
+          "size": {
+            "type": "string"
+          },
+          "brightness": {
+            "type": "string"
+          },
+          "idPlugin": {}
+        },
+        "required": [
+          "idAttachment",
+          "color",
+          "idUploadedBackground",
+          "size",
+          "brightness",
+          "idPlugin"
+        ]
+      },
+      "isTemplate": {
+        "type": "boolean"
+      },
+      "cardRole": {},
+      "attachments": {
+        "type": "array",
+        "items": {}
+      },
+      "stickers": {
+        "type": "array",
+        "items": {}
+      },
+      "limits": {
+        "type": "object",
+        "properties": {},
+        "required": []
+      }
+    },
+    "required": [
+      "id",
+      "badges",
+      "checkItemStates",
+      "closed",
+      "dueComplete",
+      "dateLastActivity",
+      "desc",
+      "descData",
+      "due",
+      "dueReminder",
+      "email",
+      "idBoard",
+      "idChecklists",
+      "idList",
+      "idMembers",
+      "idMembersVoted",
+      "idShort",
+      "idAttachmentCover",
+      "labels",
+      "idLabels",
+      "manualCoverAttachment",
+      "name",
+      "pinned",
+      "pos",
+      "shortLink",
+      "shortUrl",
+      "start",
+      "subscribed",
+      "url",
+      "cover",
+      "isTemplate",
+      "cardRole",
+      "attachments",
+      "stickers",
+      "limits"
+    ]
+  }
