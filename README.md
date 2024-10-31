@@ -43,3 +43,4 @@ Run the tests:
 
 - [Node.js](https://nodejs.org/en/)
 - [Cypress](https://www.cypress.io/)
+- [AJV](https://ajv.js.org/)
