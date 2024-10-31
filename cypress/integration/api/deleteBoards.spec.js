@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-describe('Trello Delete Boards API Tests', () => {
+describe('Trello API -  Delete a board', () => {
     const baseUrl = `${Cypress.config('baseUrl')}/boards/`;
     const defaultQueryParams = {
         token: Cypress.config('token'),

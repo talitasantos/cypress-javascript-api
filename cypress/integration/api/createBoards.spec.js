@@ -1,6 +1,9 @@
 /// <reference types="Cypress" />
 
-describe('Trello Create Boards API Tests', () => {
+import Ajv from "ajv";
+
+describe('Trello API - Create a board', () => {
+  const ajv = new Ajv();
   const baseUrl = `${Cypress.config('baseUrl')}/boards/`;
   const defaultQueryParams = {
     token: Cypress.config('token'),
@@ -18,11 +21,18 @@ describe('Trello Create Boards API Tests', () => {
 
   beforeEach(() => {
     cy.fixture('createBoards').as('boardsData');
+    cy.fixture('schemas/createBoardsSchema').as('createBoardsSchema');
   });
 
   it('Successfully create a new board', function () {
     createBoardRequest(this.boardsData.validBoard).then((response) => {
       expect(response.status).to.eq(200);
+
+      // Validate the response contract
+      const validate = ajv.compile(this.createBoardsSchema);
+      const isValid = validate(response.body);
+
+      expect(isValid, JSON.stringify(validate.errors)).to.be.true;
     });
   });
 
@@ -54,5 +64,4 @@ describe('Trello Create Boards API Tests', () => {
       expect(response.status).to.eq(413);
     });
   });
-
 });

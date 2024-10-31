@@ -2,7 +2,10 @@
     "validBoard": {
       "name": "Board created by Robot"
     },
-    "withoutName": {},
+    "withoutName": {
+      "name": "",
+      "ivalidMessage": "invalid value for name"
+    },
     "invalidToken": {
       "name": "Board created by Robot",
       "token": "invalidToken"

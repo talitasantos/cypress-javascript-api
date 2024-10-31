@@ -3,6 +3,8 @@
       "name": "Card created by Robot",
       "idList": "671f5ae583e19f6ccdc96c90"
     },
-    "invalidCardId": "67201e3569ca1487b2ff4f40FXXX"
+    "invalidCardId": {
+      "invalidId": "67201e3569ca1487b2ff4f40FXXX"
+    }
   }
   
