@@ -34,9 +34,17 @@ Install the dependencies:
   npm install
 ```
 
+Run all tests:
+```bash
+  npm run test
+```
+
 Run the tests:
 ```bash
-  npx cypress run
+  npm run test:createBoards
+  npm run test:createCards
+  npm run test:deleteBoards
+  npm run test:deleteCards
 ```
 
 ## Technologies 💻

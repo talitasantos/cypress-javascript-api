@@ -3,8 +3,8 @@
 describe('Trello API - Create and Delete Card in New Board', () => {
   const baseUrl = `${Cypress.config('baseUrl')}`;
   const defaultQueryParams = {
-    token: Cypress.config('token'),
-    key: Cypress.config('apiKey')
+    token: Cypress.env('TRELLO_TOKEN'),
+    key: Cypress.env('TRELLO_API_KEY')
   };
 
   // Create a boad

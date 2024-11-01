@@ -3,8 +3,8 @@
 describe('Trello API -  Delete a board', () => {
     const baseUrl = `${Cypress.config('baseUrl')}/boards/`;
     const defaultQueryParams = {
-        token: Cypress.config('token'),
-        key: Cypress.config('apiKey')
+        token: Cypress.env('TRELLO_TOKEN'),
+        key: Cypress.env('TRELLO_API_KEY')
     };
 
     const createBoardRequest = (queryParams) => {

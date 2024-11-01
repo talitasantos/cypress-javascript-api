@@ -6,8 +6,8 @@ describe('Trello API - Create a board', () => {
   const ajv = new Ajv();
   const baseUrl = `${Cypress.config('baseUrl')}/boards/`;
   const defaultQueryParams = {
-    token: Cypress.config('token'),
-    key: Cypress.config('apiKey')
+    token: Cypress.env('TRELLO_TOKEN'),
+    key: Cypress.env('TRELLO_API_KEY')
   };
 
   const createBoardRequest = (queryParams) => {
