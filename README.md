@@ -30,9 +30,11 @@ Install the dependencies:
   npm install
 ```
 
+Generate a new API Key and Token:
+
 Generate your `TRELLO_TOKEN` and `TRELLO_API_KEY` you must follow the steps from [Authorizing With Trello's REST API](https://developer.atlassian.com/cloud/trello/guides/rest-api/authorization/#allowed-origins).
 
-Create the `.env` file
+Create the `.env` file:
 
 Before running the tests you need to create the `.env` file in the root of your project with the environment variables necessary for the tests. The two environment variables needed for testing are: `TRELLO_TOKEN` and `TRELLO_API_KEY`.
 
