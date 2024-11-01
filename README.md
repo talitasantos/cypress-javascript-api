@@ -32,7 +32,7 @@ Install the dependencies:
 
 Create the .env file
 
-Before running the tests you need to create the `.env` file in the root of your project with the environment variables necessary for the tests. The two environment variables needed for testing are: TRELLO_TOKEN and TRELLO_API_KEY.
+Before running the tests you need to create the `.env` file in the root of your project with the environment variables necessary for the tests. The two environment variables needed for testing are: `TRELLO_TOKEN` and `TRELLO_API_KEY`.
 
 Run all tests:
 ```bash
