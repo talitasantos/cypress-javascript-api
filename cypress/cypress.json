@@ -3,14 +3,8 @@
     "requestTimeout": 8000,
     "viewportWidth": 1280,
     "viewportHeight": 720,
-    "reporter": "spec",
-    "reporterOptions": {
-      "mochaFile": "results/test-results-[hash].xml",
-      "toConsole": true
-    },
     "retries": {
       "runMode": 2,
       "openMode": 1
     }
   }
-  
